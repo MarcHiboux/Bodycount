@@ -92,7 +92,6 @@
     <Compile Include="Assets\Field - Complete Main Menu (Lite)\Scripts\TopPanelManager.cs" />
     <Compile Include="Assets\Field - Complete Main Menu (Lite)\Scripts\UIElementInFront.cs" />
     <Compile Include="Assets\Field - Complete Main Menu (Lite)\Scripts\UIElementSound.cs" />
-    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\PushStatBlock.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

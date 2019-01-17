@@ -13,15 +13,21 @@ public class ButtonsManager : MonoBehaviour {
     public InputField pCTitle;
 
     public GameObject greenHorn;
+    GameObject preFoetus;
 
     public Transform adventurerTab;
 
     public GameObject statBlockManager;
 
-    GameObject preFoetus;
+    //GameObject preFoetus;
+
+    public GameObject inputName;
+    public GameObject inputTitle;
+
+    public string name { get; set; }
+    public string title { get; set; }
 
 
-    
 
 
     void Awake () {
@@ -45,15 +51,15 @@ public class ButtonsManager : MonoBehaviour {
 
             preFoetus = (GameObject)Instantiate(greenHorn, transform);
 
-            preFoetus.name = pCName.ToString();
+            preFoetus.name = pCName.text.ToString();
+            preFoetus.GetComponentInChildren<Text>().text = pCName.text.ToString();
 
             GameObject tab = GameObject.Find("AdventurerTab");
 
-            FadeToTab(tab);
-            //Instantiate(greenHorn, transform);
-            //greenHorn.transform.SetParent(adventurerTab);
-            //greenHorn.GetComponentInChildren<Text>().text = pCName.ToString();
+            //FadeToTab(tab);
 
+            preFoetus.AddComponent<Adventurer>();
+            
 
             
             pcCreation.SetActive(false);
@@ -67,9 +73,22 @@ public class ButtonsManager : MonoBehaviour {
         }
     }
 
-    private void FadeToTab(GameObject tab)
+    //private void FadeToTab(GameObject tab)
+    //{
+    //    preFoetus.transform.SetParent(tab.transform);
+    //}
+
+    public void CreateFoetus()
     {
-        greenHorn.transform.SetParent(tab.transform);
+
+        name = inputName.GetComponent<Text>().text.ToString();
+        title = inputTitle.GetComponent<Text>().text.ToString();
+
+
+        
+        //backObject.name = name;
+        //backObject.GetComponentInChildren<Text>().text = name;
+
     }
 
     //public void ConfirmNewPC()

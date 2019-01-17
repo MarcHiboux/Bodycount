@@ -4,6 +4,9 @@ using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+// This script contains the function to create a new button to "host" an adventurer's data.
+// The ButtonsManager has the function that calls this function.
 public class BraveAdventurer : MonoBehaviour
 {
 
@@ -23,10 +26,11 @@ public class BraveAdventurer : MonoBehaviour
         name = inputName.GetComponent<Text>().text.ToString();
         title = inputTitle.GetComponent<Text>().text.ToString();
 
+        
+        backObject = GameObject.Find("GreenHorn(Clone)"); 
 
-        backObject = GameObject.Find("GreenHorn(Clone)");
-        backObject.name = name;
-        backObject.GetComponentInChildren<Text>().text = name;
+        
+        //backObject.GetComponentInChildren<Text>().text = name;
 
     }
 

@@ -20,19 +20,23 @@ public class PushStatBlock : MonoBehaviour {
         nameGoesHere = GameObject.Find("Adventurer name");
         titleGoesHere = GameObject.Find("Adventurer title");
 
-        statBlock.SetActive(false);    
+        //statBlock.SetActive(false);    
     
     }
 
     public void PushBlock() {
 
         
-        nyme = this.gameObject.GetComponent<Adventurer>().Name.ToString();
-        title = this.gameObject.GetComponent<Adventurer>().Title.ToString();
-        
-        nameGoesHere.gameObject.GetComponent<Text>().text = nyme;
-        titleGoesHere.gameObject.GetComponent<Text>().text = title;
+        nameGoesHere = GameObject.Find("Adventurer name");
+        titleGoesHere = GameObject.Find("Adventurer title");
 
-        statBlock.SetActive(true);
+        //nyme = this.gameObject.GetComponent<Adventurer>().Name.ToString();
+        //title = this.gameObject.GetComponent<Adventurer>().Title.ToString();
+        
+        //nameGoesHere.gameObject.GetComponent<Text>().text = this.gameObject.GetComponent<Adventurer>().Name.ToString();
+        //titleGoesHere.gameObject.GetComponent<Text>().text = this.gameObject.GetComponent<Adventurer>().Title.ToString();
+
+        GameObject.Find("Statblock").SetActive(true);
+
     }
 }
